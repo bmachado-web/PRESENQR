@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "PresenQR",
+    "slug": "presenqr",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#060810"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.tuempresa.presenqr",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "PresenQR necesita tu ubicación para verificar que estás en el lugar de trabajo al registrar tu asistencia.",
+        "NSCameraUsageDescription": "PresenQR necesita la cámara para escanear el código QR de tu lugar de trabajo."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#060810"
+      },
+      "package": "com.tuempresa.presenqr",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-location",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "PresenQR necesita la cámara para escanear el QR de tu lugar de trabajo."
+        }
+      ]
+    ],
+    "scheme": "presenqr",
+    "extra": {
+      "eas": {
+        "projectId": "a913a1d4-9f59-445d-885c-3885b71b028d"
+      }
+    }
+  }
+}

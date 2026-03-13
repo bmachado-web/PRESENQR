@@ -1,0 +1,5 @@
+node_modules/
+.expo/
+*.pdf
+dist/
+build/
