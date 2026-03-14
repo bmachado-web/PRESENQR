@@ -3,7 +3,7 @@
 // Este módulo envía el check-in al mismo servidor Node.js que ya tenés.
 // Cambiá SERVER_URL por la URL real de tu servidor (con HTTPS).
 //
-export const SERVER_URL = 'https://TU-SERVIDOR.com'; // ← Cambiá esto
+export const SERVER_URL = 'https://asiprof-app.onrender.com/'; // ← Cambiá esto
 
 export interface CheckinPayload {
   spreadsheetId: string;
