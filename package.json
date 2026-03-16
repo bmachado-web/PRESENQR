@@ -9,7 +9,6 @@
     "build:android": "eas build --platform android --profile preview"
   },
   "dependencies": {
-    "@expo/config-plugins": "^8.0.0",
     "@react-native-async-storage/async-storage": "1.23.1",
     "expo": "~51.0.0",
     "expo-barcode-scanner": "~13.0.1",
