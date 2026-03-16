@@ -6,11 +6,3 @@ export function calcDist(lat1:number,lon1:number,lat2:number,lon2:number):number
 export const hoy=()=>new Date().toISOString().split('T')[0];
 export const horaStr=()=>new Date().toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
 ```
-
-Guardalo como `geo.ts` en `C:\PresenQR\src\utils\`
-
-> 💡 Recordá: en "Tipo" elegí **Todos los archivos** y escribí el nombre `geo.ts`
-
-Cuando lo tengas guardado, verificá con:
-```
-dir src\utils
