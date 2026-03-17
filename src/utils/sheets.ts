@@ -24,7 +24,7 @@ export interface CheckinPayload {
 
 export async function enviarCheckin(payload: CheckinPayload): Promise<{ ok: boolean; error?: string }> {
   try {
-    const res = await fetch(`${SERVER_URL}/api/checkin`, {
+    const res = await fetch(`https://asiprof-app.onrender.com/api/checkin`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
