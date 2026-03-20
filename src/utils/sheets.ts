@@ -24,14 +24,23 @@ export interface CheckinPayload {
 
 export async function enviarCheckin(payload: CheckinPayload): Promise<{ ok: boolean; error?: string }> {
   try {
-    const res = await fetch(`https://asiprof-app.onrender.com/api/checkin`, {
+    const res = await fetch('https://script.google.com/macros/s/AKfycbyZWqR0TU-zlPatnyF-9ZGdjsQz-cpNlxkDp3nN9-qJK0pr7GhNDcYjfITk3YMSDcD6/exec', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(payload),
+      // IMPORTANTE: Google a veces hace una redirección interna, esto le dice a la app que la siga.
+      redirect: 'follow' 
     });
+
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    
+    // Google devuelve la respuesta que configuramos en el script ({ok: true})
     const data = await res.json();
-    return { ok: true, ...data };
+    return data; // Retorna directamente la respuesta de Google
+    
   } catch (e: any) {
     return { ok: false, error: e.message };
   }
